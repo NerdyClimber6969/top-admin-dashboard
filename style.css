@@ -15,44 +15,70 @@ body {
 .side-bar {
     grid-column: 1;
     grid-row: 1 / -1;
-    background-color: blue;
+    background-color: #0ea5e9;
+    z-index: 3;
 }
 
 .header {
     grid-column: 2 / -1;
     grid-row: 1;
-    background-color: blueviolet;
+    background-color: white;
+    box-shadow: 0 3px 5px lightgray;
+    z-index: 2;
 }
 
 .main-content {
     grid-column: 2/ -1;
     grid-row: 2 / -1;
-    background-color: lightgray;
+    background-color: #e2e8f0;
     display: grid;
     grid-template-columns: 3fr 1fr;
+    padding: 20px 30px 40px 20px;
+    z-index: 1;
+    column-gap: 20px;
 }
 
-.main-content > div {
-    border: solid black
+.main-content > .project,
+.info-col > .announcements,
+.info-col > .trending {
+    display: grid;
+    grid-template-rows: 1.5rem 1fr;
+    gap: 5px;
 }
 
-.main-content > .project {
+.project > div {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1rem repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background-color: white;
+    box-shadow: 4px 4px 5px lightgray;
+    border-radius: 5px;
+}
+
+.main-content > .info-col {
+    grid-column: 2 / -1;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 25px;
+}
+
+.info-col > .announcements {
+    grid-row: 1 / 2;
+}
+
+.info-col > .trending {
+    grid-row: 2 / -1;
+}
+
+.announcements > .card,
+.trending > .card {
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 .project > h3 {
-    font-size: 1rem;
     grid-area: 1 / 1 / 2 / -1;
 }
-
-
-.project > div {
-    border: solid black;
-}
-
-
-
-
-
