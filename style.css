@@ -1,0 +1,58 @@
+body,
+div, 
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template: 1fr 4fr / 1fr 4fr;
+}
+
+.side-bar {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    background-color: blue;
+}
+
+.header {
+    grid-column: 2 / -1;
+    grid-row: 1;
+    background-color: blueviolet;
+}
+
+.main-content {
+    grid-column: 2/ -1;
+    grid-row: 2 / -1;
+    background-color: lightgray;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.main-content > div {
+    border: solid black
+}
+
+.main-content > .project {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1rem repeat(3, 1fr);
+}
+
+.project > h3 {
+    font-size: 1rem;
+    grid-area: 1 / 1 / 2 / -1;
+}
+
+
+.project > div {
+    border: solid black;
+}
+
+
+
+
+
