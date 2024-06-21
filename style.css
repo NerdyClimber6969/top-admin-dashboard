@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 body,
 div, 
 h3,
@@ -11,6 +13,13 @@ body {
     width: 100vw;
     display: grid;
     grid-template: 1fr 4fr / 1fr 4fr;
+    font-family: "Noto Sans", sans-serif, 'Times New Roman', Times, serif;
+}
+
+.side-bar .icon {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(347deg) brightness(101%) contrast(101%);
+    height: 100%;
+    width: 100%;
 }
 
 .side-bar {
@@ -25,12 +34,6 @@ body {
     padding: 25px;
 }
 
-.side-bar > div,
-.setting > *,
-.header > *  {
-    border: solid black;
-}
-
 .side-bar > .menu {
     display: grid;
     grid-template-rows: repeat(6, 1fr);
@@ -42,6 +45,28 @@ body {
     align-content: start;
 }
 
+.menu > a,
+.setting > a,
+.side-bar > a {
+    display: grid;
+    gap: 15px;
+    place-items: center start;
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu > a,
+.setting > a {
+    grid-template-columns: 1fr 9fr;
+    font-size: 1rem;
+}
+
+.side-bar > a {
+    grid-template-columns: 3fr 7fr;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
 .header {
     grid-column: 2 / -1;
     grid-row: 1;
@@ -50,7 +75,56 @@ body {
     z-index: 2;
     display: grid;;
     grid-template: repeat(2, 1fr) / 3fr 2fr; 
-    padding: 10px;
+    padding: 20px 10px 10px 10px;
+}
+
+.header > .search-area {
+    display: grid;
+    grid-template-columns: 5% 50%;
+    align-self: start;
+}
+
+form > button {
+    background-color: white;
+    border: none;
+}
+
+form > input {
+    border-radius: 15px;
+    background-color: #e2e8f0;
+    border-style: none;
+    padding-left: 10px;
+}
+
+.header > .profile-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-content: start center;
+}
+
+.profile-menu div {
+    justify-self: start;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.header > .user-greet {
+    display: grid;
+    grid-template: repeat(2, 1fr) / 1fr 5fr;
+}
+
+.icon.user-icon {
+    grid-row: span 2;
+}
+
+.user-greet div:nth-child(2) 
+{   align-self: center;
+    font-size: 0.8rem;
+}
+
+.user-greet div:last-child {
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .header > .user-edit {
@@ -93,6 +167,10 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
+}
+
+.project > div > div {
+    border-left: gold solid 6px;
 }
 
 .card {

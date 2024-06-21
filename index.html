@@ -9,33 +9,35 @@
     
     <body>
         <div class="side-bar">
-            <div class="logo"><img>Dashboard</div>
+            <a href="#" class="logo"><img class="icon" src="image/dashboard.svg">Dashboard</a>
             <div class="menu">
-                <a href="#">Home</a>
-                <a>Profile</a>
-                <a>Message</a>
-                <a>History</a>
-                <a>Tasks</a>
-                <a>Communities</a>
+                <a href="#"><img class="icon" src="./image/home.svg">Home</a>
+                <a href="#"><img class="icon" src="./image/profile.svg">Profile</a>
+                <a href="#"><img class="icon" src="./image/message.svg">Message</a>
+                <a href="#"><img class="icon" src="./image/history.svg">History</a>
+                <a href="#"><img class="icon" src="./image/task.svg">Tasks</a>
+                <a href="#"><img class="icon" src="./image/communities.svg">Communities</a>
             </div>
             <div class="setting">
-                <a>Setting</a>
-                <a>Support</a>
-                <a>Privacy</a>
+                <a href="#"><img class="icon" src="./image/setting.svg">Setting</a>
+                <a href="#"><img class="icon" src="./image/support.svg">Support</a>
+                <a href="#"><img class="icon" src="./image/privacy.svg">Privacy</a>
             </div>
         </div>
         <div class="header">
-            <form class="search-area">
-                <input id="search-submit" type="submit">
+            <form class="search-area" action="#" method="post">
+                <button type="submit" id="search-submit">
+                    <img src="./image/search.svg" style="width: auto; height: 20px;">
+                </button>
                 <input id="search-input" type="text" name="search">
             </form>
             <div class="profile-menu">
                 <button id="notification"></button>
-                <button id="pop"></button>
+                <button class="icon user-icon small" id="pop"></button>
                 <div id="user-name">Morgan Oakley</div>
             </div>
             <div class="user-greet">
-                <img>
+                <img class="icon user-icon big">
                 <div>Hi there,</div>
                 <div>Morgan Oakley (@Morgan)</div>
             </div>
