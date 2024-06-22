@@ -3,7 +3,10 @@
 body,
 div, 
 h3,
-button {
+h4,
+p,
+button,
+hr {
     margin: 0;
     padding: 0;
 }
@@ -14,6 +17,25 @@ body {
     display: grid;
     grid-template: 1fr 4fr / 1fr 4fr;
     font-family: "Noto Sans", sans-serif, 'Times New Roman', Times, serif;
+}
+
+p {
+    font-size: 12px;
+}
+
+span {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+button {
+    background-color: white;
+    border: none;
+}
+
+hr {
+    margin: 7px 0;
 }
 
 .side-bar .icon {
@@ -80,13 +102,8 @@ body {
 
 .header > .search-area {
     display: grid;
-    grid-template-columns: 5% 50%;
+    grid-template-columns: 5% 90%;
     align-self: start;
-}
-
-form > button {
-    background-color: white;
-    border: none;
 }
 
 form > input {
@@ -98,13 +115,38 @@ form > input {
 
 .header > .profile-menu {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    place-content: start center;
+    grid-template: 1fr / repeat(2, 20%) 30%;
+    justify-content: end;
+    place-items: start center;
+}
+
+.user-icon {
+    border: solid black;
+    border-radius: 40px;
+}
+
+.user-icon.small {
+    width: 25%; 
+    height: auto;
+}
+
+.user-icon.medium {
+    width: 100%; 
+    height: auto;
+}
+
+.user-icon.big {
+    width: 50%; 
+    height: auto;
+}
+
+.profile-menu > #notification {
+    text-align: end;
 }
 
 .profile-menu div {
     justify-self: start;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: bold;
 }
 
@@ -113,8 +155,10 @@ form > input {
     grid-template: repeat(2, 1fr) / 1fr 5fr;
 }
 
-.icon.user-icon {
-    grid-row: span 2;
+.user-greet div:first-child {
+    grid-row: 1/ 3;
+    align-self: center;
+    text-align: center;
 }
 
 .user-greet div:nth-child(2) 
@@ -123,7 +167,7 @@ form > input {
 }
 
 .user-greet div:last-child {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: bold;
 }
 
@@ -177,6 +221,24 @@ form > input {
     background-color: white;
     box-shadow: 4px 4px 5px lightgray;
     border-radius: 5px;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project  .card {
+    justify-content: space-between;
+}
+
+.card > div[class="card-button"] {
+    display: grid;
+    grid-template: 1fr / repeat(3, 15%);
+    place-content: center end;
+}
+
+.icon.card-icon {
+    width: 35%; 
+    height: auto;
 }
 
 .main-content > .info-col {
@@ -196,8 +258,28 @@ form > input {
 
 .announcements > .card,
 .trending > .card {
+    display: flex;
+    flex-direction: column;
+}
+
+.announcements > .card > div {
+    flex: 1
+}
+
+.trending > .card {
+    gap: 10px;
+}
+
+.trending-item {
     display: grid;
-    grid-template-columns: 1fr;
+    gap: 20px;
+    grid-template: 1fr / 20% 50%;
+    flex: 1 1 calc(100%/4);
+    align-items: center;
+}
+
+.trending-item > div {
+    font-size: 11px;
 }
 
 .project > h3 {
