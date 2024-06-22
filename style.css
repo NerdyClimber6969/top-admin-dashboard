@@ -273,7 +273,7 @@ form > input {
 .trending-item {
     display: grid;
     gap: 20px;
-    grid-template: 1fr / 20% 50%;
+    grid-template: 1fr / 15% 50%;
     flex: 1 1 calc(100%/4);
     align-items: center;
 }
